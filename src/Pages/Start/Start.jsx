@@ -8,8 +8,10 @@ import { useNavigation } from "@react-navigation/native";
 
 
 export default function Start(){
+    const navegacao = useNavigation();
+
     const handleNavAppExplanation = () => {
-        console.log("testando o clique");
+        navegacao.navigate("AppExplanation");
     }
 
 
@@ -38,7 +40,7 @@ export default function Start(){
 const myStyle = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: "#af0bf0"
+        backgroundColor: "#292A4C"
     },
      logo:{
         width: 300,

@@ -24,10 +24,11 @@ const myStyle = StyleSheet.create({
         // height: height,
         alignItems: "center",
         justifyContent: "center",
-        borderWidth: 1,
+        // borderWidth: 1,
         borderColor: "#fafafa",
-        borderRadius: 10,
-        marginBottom: 20
+        borderRadius: 50,
+        marginBottom: 20,
+        backgroundColor: "#FC2E7D",
     },
     buttonText:{
         color:  "#fafafa",
