@@ -38,7 +38,7 @@ export default function Start(){
 const myStyle = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: "#af0bf0"
+        backgroundColor: "#292A4C"
     },
      logo:{
         width: 300,

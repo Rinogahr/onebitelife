@@ -1,6 +1,7 @@
 import React from "react";
-import { View, ScrollView, Image, Text, StyleSheet } from "react-native";
+import { View, ScrollView, Text, StyleSheet } from "react-native";
 import DefaultButton from "../../Components/Common/DefaultButton/DefaultButton";
+import ExplanationCard from "../../Components/Explanation/ExplanationCard";
 
 export default function AppExplanation(){
     const handleShoWHome = () =>{
@@ -11,6 +12,7 @@ export default function AppExplanation(){
             <ScrollView>
                 <View style={{alignItems: "center"}}>
                     <Text style={myStyle.title}>Antes, deixa {"\n"} eu te explicar...</Text>
+                    <ExplanationCard/>
                     <Text style={myStyle.descriptionCta}>
                         Pronto(a) para subir de nível na vida?
                     </Text>
@@ -33,7 +35,7 @@ export default function AppExplanation(){
 const myStyle = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: "#af0bf0",
+        backgroundColor: "#292A4C",
     },
     title: {
         fontSize: 30,
