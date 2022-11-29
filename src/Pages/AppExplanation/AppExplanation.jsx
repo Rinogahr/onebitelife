@@ -2,10 +2,13 @@ import React from "react";
 import { View, ScrollView, Text, StyleSheet } from "react-native";
 import DefaultButton from "../../Components/Common/DefaultButton/DefaultButton";
 import ExplanationCard from "../../Components/Explanation/ExplanationCard";
+import { useNavigation } from "@react-navigation/native";
 
 export default function AppExplanation(){
+    const navegacao = useNavigation();
+
     const handleShoWHome = () =>{
-        console.log("handleShoWHome");
+        navegacao.navigate("Home");
     }
     return(
         <View style={myStyle.container}>

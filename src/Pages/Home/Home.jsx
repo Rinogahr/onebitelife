@@ -9,7 +9,7 @@ export default function Home(){
 
     return(
         <View style={myStyle.container}>
-
+            <Text>TELA DE HOME VAMOS CRIAR</Text>
 
         </View>
     );
