@@ -26,7 +26,7 @@ export default function Home(){
                     <Text style={myStyle.dailyCheks}>❤️ 20 dias - ✔️ 80 checks</Text>
                     <LifeStatus/>
                     <StatusBar/>
-                    
+
                     { mindHabit ? (
                         <EditeHabit
                             habit={mindHabit?.habitName}
@@ -35,7 +35,7 @@ export default function Home(){
                             checkColor="#90B7F3"
                         />
                     ) : <CreateHabit habiteArea="Mente" borderColor="#90B7F3"/> }
-                    
+
                     { moneyHabit ? (
                         <EditeHabit
                             habit={moneyHabit?.habitName}
@@ -44,7 +44,7 @@ export default function Home(){
                             checkColor="#85BB65"
                         />
                     ) : <CreateHabit habiteArea="Financeiro" borderColor="##85BB65"/> }
-                    
+
                     { bodyHabit ? (
                         <EditeHabit
                             habit={bodyHabit?.habitName}
@@ -53,7 +53,7 @@ export default function Home(){
                             checkColor="#FF0044"
                         />
                     ) : <CreateHabit habiteArea="Corpo" borderColor="#FF0044"/> }
-                    
+
                     { funHabit ? (
                         <EditeHabit
                             habit={funHabit?.habitName}
