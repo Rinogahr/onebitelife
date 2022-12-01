@@ -1,14 +1,19 @@
 import React, {useEffect, useState} from "react";
 import { View, ScrollView, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 
 
 
-
-export default function CreateHabit({ habiteArea, borderColor}){
+export default function CreateHabit({ habitArea, borderColor}){
+    const navegacao = useNavigation();
 
     function handleCreate(){
-        console.log(`Botão da área clicada: ${habiteArea}`)
+        console.log(habitArea);
+        navegacao.navigate("HabitPage", {
+            create: true,
+            habit: { habitArea: habitArea}
+        });
     }
     return(
         <TouchableOpacity
@@ -17,7 +22,7 @@ export default function CreateHabit({ habiteArea, borderColor}){
             onPress={handleCreate}
         >
             <Text style={myStyle.habitTitle}>
-                Adicionar meta {habiteArea === "Mente" ? "da" : "do"} {habiteArea}
+                Adicionar meta {habitArea === "Mente" ? "da" : "do"} {habitArea}
             </Text>
         </TouchableOpacity>
     );

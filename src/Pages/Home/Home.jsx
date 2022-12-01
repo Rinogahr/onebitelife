@@ -34,7 +34,7 @@ export default function Home(){
                             habitArea={mindHabit?.habitArea}
                             checkColor="#90B7F3"
                         />
-                    ) : <CreateHabit habiteArea="Mente" borderColor="#90B7F3"/> }
+                    ) : <CreateHabit habitArea="Mente" borderColor="#90B7F3"/> }
 
                     { moneyHabit ? (
                         <EditeHabit
@@ -43,7 +43,7 @@ export default function Home(){
                             habitArea={moneyHabit?.habitArea}
                             checkColor="#85BB65"
                         />
-                    ) : <CreateHabit habiteArea="Financeiro" borderColor="##85BB65"/> }
+                    ) : <CreateHabit habitArea="Financeiro" borderColor="##85BB65"/> }
 
                     { bodyHabit ? (
                         <EditeHabit
@@ -52,7 +52,7 @@ export default function Home(){
                             habitArea={bodyHabit?.habitArea}
                             checkColor="#FF0044"
                         />
-                    ) : <CreateHabit habiteArea="Corpo" borderColor="#FF0044"/> }
+                    ) : <CreateHabit habitArea="Corpo" borderColor="#FF0044"/> }
 
                     { funHabit ? (
                         <EditeHabit
@@ -61,7 +61,7 @@ export default function Home(){
                             habitArea={funHabit?.habitArea}
                             checkColor="#FE7F23"
                         />
-                    ) : <CreateHabit habiteArea="Humor" borderColor="#FE7F23"/> }
+                    ) : <CreateHabit habitArea="Humor" borderColor="#FE7F23"/> }
                 </View>
                 <Text style={myStyle.explanationText}
                 onPress={ () => handleNavExplanation()}>Ver explicação novamente</Text>
