@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { View, Image, StyleSheet } from "react-native";
 import { SelectList, } from "react-native-dropdown-select-list";
-
+// aula aparada em 45mn:46ss
 import HabitsData from "../../../Database/HabitsData";
 
 export default function SeletctHabit({habit, habitInput}){
