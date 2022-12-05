@@ -4,7 +4,7 @@ import { View, ScrollView, Image, Text, StyleSheet, Alert, TouchableOpacity } fr
 import SeletctHabit from "../../Components/HabitPage/SelectHabit/SelectHabit";
 import SelectFrequency from "../../Components/HabitPage/SelectFrequency/SelectFrequency";
 import Notification from "../../Components/HabitPage/Notificatio/Notificatio";
-
+import TimeDataPicker from "../../Components/HabitPage/TimeDataPicker/TimeDataPicker";
 
 
 export default function HabitPage({ route }){
@@ -12,8 +12,12 @@ export default function HabitPage({ route }){
     const [habitInput, setHabitInput] = useState();
     const [frequencyInput, setFrequencyInput] = useState();
     const [notificationToggle, setNotificationToggle] = useState();
+    const [dayNotification, setDayNotification] = useState();
+    const [timeNotification, setTimeNotification] = useState();
+
 
     const { create, habit } = route.params;
+
     return(
         <View style={myStyle.container}>
              <ScrollView>
@@ -40,10 +44,24 @@ export default function HabitPage({ route }){
                         <SelectFrequency habitFrequency={habit?.habitFrequency}
                         frequencyInput={setFrequencyInput}/>
 
-                        <Notification
+                        {frequencyInput === "Mensal" ? null : (
+                            <Notification
                             notificationToggle={notificationToggle}
                             setNotificationToggle={setNotificationToggle}
                         />
+                        )}
+
+                        {notificationToggle ? (
+                            frequencyInput === "Mensal" ? null : (
+                                <TimeDataPicker
+                                    frequency={frequencyInput}
+                                    dayNotification={dayNotification}
+                                    timeNotification={timeNotification}
+                                    setDayNotification={setDayNotification}
+                                    setTimeNotification={setTimeNotification}
+                                />
+                            )
+                        ) : null }        
                     </View>
                 </View>
              </ScrollView>
