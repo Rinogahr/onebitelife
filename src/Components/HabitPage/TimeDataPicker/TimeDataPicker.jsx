@@ -61,8 +61,6 @@ export default function TimeDataPicker({
     { key: "Sabado" , value: "Sab"},
    ];
 
-   console.log("frequency ::> ", frequency);
-
    
     return(
         <View style={myStyle.container}>
@@ -71,10 +69,10 @@ export default function TimeDataPicker({
             </TouchableOpacity>
 
             <View style={myStyle.textContainer}>
-                {frequency === "Diário" ?(
+                {frequency != "7 dias" ?(
                     <Text style={myStyle.notificationText}>Dia do hábito: Diário</Text>
                 ) : null}
-                {frequency === "Semanal" ? (
+                {frequency === "7 dias" ? (
                     <SelectList
                         data={data}
                         search={false}
@@ -96,7 +94,7 @@ export default function TimeDataPicker({
                         }
                     />
                     ) : null}
-                    {frequency === "Semanal" ? (
+                    {frequency != "1 dia" ? (
                         <Text style={myStyle.notificationText}>Dia do hábito: {notificationDate}</Text>
                     ) : null}
                     <Text style={myStyle.notificationText}>Horário do hábito: {notificationTime}</Text>
