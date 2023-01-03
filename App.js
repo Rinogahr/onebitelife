@@ -7,7 +7,7 @@ export default function App() {
     <>
       <StatusBar barStyle={"aout"}/>
       <Routes/>
-    </>    
+    </>
   );
 }
 
@@ -18,5 +18,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  
+
 });
